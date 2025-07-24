@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: hari2821/custom-nginx:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx-data:/var/opt/nginx
+
